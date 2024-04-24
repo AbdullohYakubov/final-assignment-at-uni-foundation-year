@@ -1,4 +1,5 @@
 import csv
+import matplotlib.pyplot as plt
 
 # user_input = input('Choose an option: \n1. Plots \n2. Analyze Data \n3. Exit \nEnter your choice: 1')
 # if user_input.isnumeric() == 1:
@@ -12,43 +13,20 @@ with open ('dart_hits.csv', newline='') as csvfile:
         for element in row:
             list.append(element)
 
-# x_coords = [list[i] for i in range(4, len(list), 3)]
-x_coords = []
-for i in range(4, len(list), 3):
-    x_coords.append(float(list[i]))
-print(x_coords)
+data_titles = [list[i] for i in range(3)]
 
-y_coords = []
-for i in range(5, len(list), 3):
-    y_coords.append(float(list[i]))
-# print(y_coords)
+x_coords = [float(list[i]) for i in range(4, len(list), 3)]
 
-player_1_x_coords = []
-for i in range(0, len(x_coords), 3):
-    player_1_x_coords.append(float(list[i]))
-# print(player_1_x_coords)
+y_coords = [float(list[i]) for i in range(5, len(list), 3)]
 
-player_2_x_coords = []
-for i in range(1, len(x_coords), 3):
-    player_2_x_coords.append(float(list[i]))
-# print(player_2_x_coords)
+player_1_x_coords = [float(x_coords[i]) for i in range(0, len(x_coords), 3)]
 
-player_3_x_coords = []
-for i in range(2, len(x_coords), 3):
-    player_3_x_coords.append(float(list[i]))
-# print(player_3_x_coords)
+player_2_x_coords = [float(x_coords[i]) for i in range(1, len(x_coords), 3)]
+
+player_3_x_coords = [float(x_coords[i]) for i in range(2, len(x_coords), 3)]
     
-player_1_y_coords = []
-for i in range(0, len(y_coords), 3):
-    player_1_y_coords.append(float(list[i]))
-# print(player_1_y_coords)
+player_1_y_coords = [float(y_coords[i]) for i in range(0, len(y_coords), 3)]
 
-player_2_y_coords = []
-for i in range(1, len(y_coords), 3):
-    player_2_y_coords.append(float(list[i]))
-# print(player_2_y_coords)
+player_2_y_coords = [float(y_coords[i]) for i in range(1, len(y_coords), 3)]
 
-player_3_y_coords = []
-for i in range(2, len(y_coords), 3):
-    player_3_y_coords.append(float(list[i]))
-# print(player_3_y_coords)
+player_3_y_coords = [float(y_coords[i]) for i in range(2, len(y_coords), 3)]
